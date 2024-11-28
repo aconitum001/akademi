@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1310.0" style="-fx-background-color: #F3F4FF;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StudentSceneController">
+   <children>
+      <Label layoutX="15.0" layoutY="14.0" text="Gestion des étudiants" textFill="#303972">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="72.0" prefHeight="44.0" prefWidth="840.0" style="-fx-background-color: #4D44B5;">
+         <children>
+            <Region prefHeight="51.0" prefWidth="16.0" />
+            <Label text="Ajout d’un étudiant" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <AnchorPane layoutX="14.0" layoutY="116.0" prefHeight="215.0" prefWidth="841.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <ChoiceBox fx:id="addClasseChoiceBox" layoutX="19.0" layoutY="114.0" prefHeight="38.0" prefWidth="376.0" style="-fx-border-color: #C1BBEB; -fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: #ffffff;" />
+            <Label layoutX="431.0" layoutY="9.0" text="Nom comlplet *" textFill="#303972">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="addCINTextField" layoutX="20.0" layoutY="36.0" prefHeight="37.0" prefWidth="374.0" style="-fx-border-color: #C1BBEB; -fx-background-radius: 5; -fx-border-radius: 5;" />
+            <Label layoutX="20.0" layoutY="9.0" text="CIN *" textFill="#303972">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="19.0" layoutY="88.0" text="Classe *" textFill="#303972">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="431.0" layoutY="86.0" text="Filiére *" textFill="#303972">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Button layoutX="702.0" layoutY="165.0" mnemonicParsing="false" onAction="#addStudentMethode" prefHeight="37.0" prefWidth="103.0" style="-fx-background-color: #4D44B5; -fx-background-radius: 40;" text="Ajouter" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextField fx:id="addFullNameTextField" layoutX="431.0" layoutY="36.0" prefHeight="37.0" prefWidth="374.0" style="-fx-border-color: #C1BBEB; -fx-background-radius: 5; -fx-border-radius: 5;" />
+            <ChoiceBox fx:id="addFiliereChoiceBox" layoutX="431.0" layoutY="114.0" prefHeight="38.0" prefWidth="376.0" style="-fx-border-color: #C1BBEB; -fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: #ffffff;" />
+         </children>
+      </AnchorPane>
+      <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="346.0" prefHeight="44.0" prefWidth="840.0" style="-fx-background-color: #4D44B5;">
+         <children>
+            <Region prefHeight="51.0" prefWidth="16.0" />
+            <Label text="Mise à jour des informations des étudiants" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <AnchorPane layoutX="15.0" layoutY="390.0" prefHeight="215.0" prefWidth="841.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <ChoiceBox fx:id="updateClasseChoiceBox" layoutX="19.0" layoutY="114.0" prefHeight="38.0" prefWidth="376.0" style="-fx-border-color: #C1BBEB; -fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: #ffffff;" />
+            <Label layoutX="431.0" layoutY="9.0" text="Nouveau nom complet *" textFill="#303972">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="updateCINTextField" layoutX="20.0" layoutY="36.0" prefHeight="37.0" prefWidth="374.0" style="-fx-border-color: #C1BBEB; -fx-background-radius: 5; -fx-border-radius: 5;" />
+            <Label layoutX="20.0" layoutY="9.0" text="CIN du étudiant à modifier *" textFill="#303972">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="19.0" layoutY="88.0" text="Nouveau Classe *" textFill="#303972">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="431.0" layoutY="86.0" text="Nouveau Filiére *" textFill="#303972">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Button layoutX="702.0" layoutY="165.0" mnemonicParsing="false" onAction="#updateStudentMethode" prefHeight="37.0" prefWidth="103.0" style="-fx-background-color: #4D44B5; -fx-background-radius: 40;" text="Modifier" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextField fx:id="updateFullNameTextField" layoutX="431.0" layoutY="36.0" prefHeight="37.0" prefWidth="374.0" style="-fx-border-color: #C1BBEB; -fx-background-radius: 5; -fx-border-radius: 5;" />
+            <ChoiceBox fx:id="updateFiliereChoiceBox" layoutX="431.0" layoutY="114.0" prefHeight="38.0" prefWidth="376.0" style="-fx-border-color: #C1BBEB; -fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: #ffffff;" />
+         </children>
+      </AnchorPane>
+      <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="618.0" prefHeight="44.0" prefWidth="840.0" style="-fx-background-color: #4D44B5;">
+         <children>
+            <Region prefHeight="51.0" prefWidth="16.0" />
+            <Label text="Supprimer un étudiant" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <AnchorPane layoutX="15.0" layoutY="662.0" prefHeight="74.0" prefWidth="841.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Label layoutX="14.0" layoutY="27.0" text="CIN du étudiant à supprimer *" textFill="#303972">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="deleteCINTextField" layoutX="245.0" layoutY="19.0" prefHeight="37.0" prefWidth="374.0" style="-fx-border-color: #C1BBEB; -fx-background-radius: 5; -fx-border-radius: 5;" />
+            <Button layoutX="702.0" layoutY="19.0" mnemonicParsing="false" onAction="#deleteStudentMethode" prefHeight="37.0" prefWidth="103.0" style="-fx-background-color: #4D44B5; -fx-background-radius: 40;" text="Supprimer" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

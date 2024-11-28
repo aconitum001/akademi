@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="569.0" prefWidth="563.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+   <children>
+      <ImageView fitHeight="27.0" fitWidth="15.0" layoutX="78.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="100.0" layoutY="77.0" prefHeight="20.0" prefWidth="79.0" text="Akademi" textFill="#303972">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="78.0" layoutY="110.0" prefHeight="35.0" prefWidth="389.0" text="Connectez-vous à votre compte." textFill="#303972">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="78.0" layoutY="145.0" text="Entrez votre email et votre mot de passe pour vous connecter." textFill="#303972" />
+      <TextField fx:id="emailTextField" layoutX="78.0" layoutY="217.0" prefHeight="44.0" prefWidth="366.0" promptText="vous@example.com" />
+      <Label layoutX="78.0" layoutY="191.0" prefHeight="17.0" prefWidth="111.0" text="Adresse e-mail: " textFill="#303972">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="78.0" layoutY="278.0" prefHeight="17.0" prefWidth="111.0" text="Mot de passe: " textFill="#303972">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="loginButton" layoutX="78.0" layoutY="395.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="35.0" prefWidth="366.0" text="Connexion" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <PasswordField fx:id="passwordTextField" layoutX="78.0" layoutY="310.0" prefHeight="44.0" prefWidth="366.0" promptText="Tapez votre mot de passe sécurisé" />
+   </children>
+</AnchorPane>

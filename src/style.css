@@ -1,0 +1,31 @@
+.root {
+    -fx-background-color: #F3F4FF;
+}
+
+.label {
+    -fx-font-family: "Poppins";
+}
+
+.text-field {
+    -fx-background-radius: 8;
+    -fx-border-color: #4D44B5;
+    -fx-border-radius: 8;   
+    -fx-padding: 5;        
+}
+
+#loginButton {
+    -fx-background-color: #4D44B5;
+    -fx-border-radius: 14;          
+    -fx-padding: 10px;
+    -fx-background-insets: 0;       
+    -fx-background-radius: 8;  
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 1);
+}
+
+
+#loginButton:hover {
+    -fx-background-color: #3A3799;
+    -fx-cursor: hand;
+}
+
+
