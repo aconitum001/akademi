@@ -6,15 +6,6 @@ public class SubjectModel {
     private double coefficient;
     private int filiereId;
 
-
-    public SubjectModel(int ID, String label, double coefficient, int filiereId) {
-        this.ID = ID;
-        this.label = label;
-        this.coefficient = coefficient;
-        this.filiereId = filiereId;
-    }
-
-
     public int getID() {
         return this.ID;
     }
@@ -22,6 +13,19 @@ public class SubjectModel {
     public void setID(int ID) {
         this.ID = ID;
     }
+
+
+    public SubjectModel(int ID,String label, double coefficient, int filiereId) {
+        this.ID = ID;
+        this.label = label;
+        this.coefficient = coefficient;
+        this.filiereId = filiereId;
+    }
+
+    public boolean isBlank() {
+        return label.isBlank() || coefficient == -43 || filiereId == -1;
+    }
+
 
     public String getLabel() {
         return this.label;
@@ -50,8 +54,7 @@ public class SubjectModel {
     @Override
     public String toString() {
         return "{" +
-            " ID='" + getID() + "'" +
-            ", label='" + getLabel() + "'" +
+            "label='" + getLabel() + "'" +
             ", coefficient='" + getCoefficient() + "'" +
             ", filiereId='" + getFiliereId() + "'" +
             "}";

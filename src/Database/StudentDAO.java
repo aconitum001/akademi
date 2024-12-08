@@ -39,6 +39,29 @@ public class StudentDAO {
         }
     }
 
+    public StudentModel getStudentQuery(Connection connectDB, String CIN) {
+        String query = "SELECT * FROM students WHERE CIN = ?";
+        try (PreparedStatement preparedStatement = connectDB.prepareStatement(query)) {
+            preparedStatement.setString(1, CIN);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            
+            if (resultSet.next()) {
+                return new StudentModel(
+                    resultSet.getString(1),      
+                    resultSet.getString(2),  
+                    resultSet.getString(3),       
+                    resultSet.getString(4)      
+                );
+            } else {
+                return null;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+    
+
     public void updateQuery(Connection connectDB, StudentModel studentModel) {
         String query = "UPDATE students " +
                        "SET fullName = ?, " +

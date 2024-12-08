@@ -32,11 +32,13 @@ VALUES ('CS'),('IRS'),('SE');
 
 CREATE TABLE matiers (
     matierID INT AUTO_INCREMENT PRIMARY KEY,
-    label VARCHAR(40) NOT NULL UNIQUE,
+    label VARCHAR(40) NOT NULL,
     coeff DECIMAL(5,2),
     filierID INT,
     CONSTRAINT filierID_FK FOREIGN KEY (filierID) REFERENCES filiers (filierID)
 );
+
+DROP TABLE matiers;
 
 
 CREATE TABLE students (
@@ -45,6 +47,14 @@ CREATE TABLE students (
     classe VARCHAR(15) NOT NULL,
     filiere VARCHAR(5),
     CONSTRAINT filiere_CK CHECK (filiere IN ('CS','IRS','SE'))
+);
+
+CREATE TABLE notes (
+	studentCIN varchar(15) PRIMARY KEY,
+    matierID INT,
+    note DECIMAL(5,2),
+    CONSTRAINT studentCIN_FK FOREIGN KEY (studentCIN) REFERENCES students(CIN),
+	CONSTRAINT matierID_FK FOREIGN KEY (matierID) REFERENCES matiers(matierID)
 );
 
 

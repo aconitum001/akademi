@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1310.0" style="-fx-background-color: #F3F4FF;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ThirdSceneController">
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1310.0" style="-fx-background-color: #F3F4FF;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SubjectSceneController">
    <children>
       <Label layoutX="14.0" layoutY="14.0" text="Gestion des matières" textFill="#303972">
          <font>
@@ -27,25 +27,25 @@
             </Label>
          </children>
       </HBox>
-      <AnchorPane layoutX="13.0" layoutY="114.0" prefHeight="215.0" prefWidth="841.0" style="-fx-background-color: #ffffff;">
+      <AnchorPane layoutX="13.0" layoutY="114.0" prefHeight="203.0" prefWidth="842.0" style="-fx-background-color: #ffffff;">
          <children>
-            <TextField fx:id="addSubjectLabelTextField" layoutX="173.0" layoutY="26.0" prefHeight="38.0" prefWidth="631.0" style="-fx-border-color: #C1BBEB; -fx-background-radius: 5; -fx-border-radius: 5;" />
-            <Label layoutX="19.0" layoutY="35.0" text=" Nom de la Matière *" textFill="#303972">
+            <TextField fx:id="addSubjectLabelTextField" layoutX="164.0" layoutY="16.0" prefHeight="38.0" prefWidth="631.0" style="-fx-border-color: #C1BBEB; -fx-background-radius: 5; -fx-border-radius: 5;" />
+            <Label layoutX="14.0" layoutY="25.0" text=" Nom de la Matière *" textFill="#303972">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label layoutX="19.0" layoutY="88.0" prefHeight="22.0" prefWidth="186.0" text="Coefficient de la Matière *" textFill="#303972">
+            <Label layoutX="19.0" layoutY="75.0" prefHeight="22.0" prefWidth="186.0" text="Coefficient de la Matière *" textFill="#303972">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label layoutX="431.0" layoutY="86.0" text="Filière Associée à la Matière *" textFill="#303972">
+            <Label layoutX="431.0" layoutY="73.0" text="Filière Associée à la Matière *" textFill="#303972">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Button layoutX="702.0" layoutY="165.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="103.0" style="-fx-background-color: #4D44B5; -fx-background-radius: 40;" text="Ajouter" textFill="WHITE">
+            <Button layoutX="703.0" layoutY="150.0" mnemonicParsing="false" onAction="#addSubjectMethode" prefHeight="37.0" prefWidth="103.0" style="-fx-background-color: #4D44B5; -fx-background-radius: 40;" text="Ajouter" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
@@ -53,8 +53,8 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <ChoiceBox fx:id="addFiliereChoiceBox" layoutX="431.0" layoutY="114.0" prefHeight="38.0" prefWidth="376.0" style="-fx-border-color: #C1BBEB; -fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: #ffffff;" />
-            <TextField fx:id="addSubjectCoeffTextField" layoutX="19.0" layoutY="114.0" prefHeight="38.0" prefWidth="376.0" style="-fx-border-color: #C1BBEB; -fx-background-radius: 5; -fx-border-radius: 5;" />
+            <ChoiceBox fx:id="addFiliereChoiceBox" layoutX="431.0" layoutY="99.0" prefHeight="38.0" prefWidth="376.0" style="-fx-border-color: #C1BBEB; -fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: #ffffff;" />
+            <TextField fx:id="addSubjectCoeffTextField" layoutX="17.0" layoutY="99.0" prefHeight="38.0" prefWidth="376.0" style="-fx-border-color: #C1BBEB; -fx-background-radius: 5; -fx-border-radius: 5;" />
          </children>
       </AnchorPane>
       <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="346.0" prefHeight="44.0" prefWidth="840.0" style="-fx-background-color: #4D44B5;">
@@ -67,25 +67,25 @@
             </Label>
          </children>
       </HBox>
-      <AnchorPane layoutX="13.0" layoutY="390.0" prefHeight="215.0" prefWidth="841.0" style="-fx-background-color: #ffffff;">
+      <AnchorPane layoutX="13.0" layoutY="390.0" prefHeight="203.0" prefWidth="842.0" style="-fx-background-color: #ffffff;">
          <children>
-            <TextField fx:id="updateSubjectLabelTextField" layoutX="235.0" layoutY="26.0" prefHeight="38.0" prefWidth="570.0" style="-fx-border-color: #C1BBEB; -fx-background-radius: 5; -fx-border-radius: 5;" />
-            <Label layoutX="19.0" layoutY="35.0" text=" Nouveau Nom de la Matière *" textFill="#303972">
+            <TextField fx:id="updateSubjectLabelTextField" layoutX="236.0" layoutY="17.0" prefHeight="38.0" prefWidth="570.0" style="-fx-border-color: #C1BBEB; -fx-background-radius: 5; -fx-border-radius: 5;" />
+            <Label layoutX="19.0" layoutY="26.0" prefHeight="22.0" prefWidth="213.0" text="Nom de la matiére a modifier *" textFill="#303972">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label layoutX="19.0" layoutY="88.0" prefHeight="22.0" prefWidth="186.0" text="Coefficient de la Matière *" textFill="#303972">
+            <Label layoutX="20.0" layoutY="75.0" prefHeight="22.0" prefWidth="254.0" text="Nouveau Coefficient de la Matière *" textFill="#303972">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label layoutX="431.0" layoutY="86.0" text="Filière Associée à la Matière *" textFill="#303972">
+            <Label layoutX="431.0" layoutY="73.0" text="Filière Associée à la Matière a modifier *" textFill="#303972">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Button layoutX="702.0" layoutY="165.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="103.0" style="-fx-background-color: #4D44B5; -fx-background-radius: 40;" text="Modifier" textFill="WHITE">
+            <Button layoutX="702.0" layoutY="151.0" mnemonicParsing="false" onAction="#updateSubjectMethode" prefHeight="37.0" prefWidth="103.0" style="-fx-background-color: #4D44B5; -fx-background-radius: 40;" text="Modifier" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
@@ -93,11 +93,11 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <ChoiceBox fx:id="updateFiliereChoiceBox" layoutX="431.0" layoutY="114.0" prefHeight="38.0" prefWidth="376.0" style="-fx-border-color: #C1BBEB; -fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: #ffffff;" />
-            <TextField fx:id="updateSubjectCoeffTextField" layoutX="19.0" layoutY="114.0" prefHeight="38.0" prefWidth="376.0" style="-fx-border-color: #C1BBEB; -fx-background-radius: 5; -fx-border-radius: 5;" />
+            <ChoiceBox fx:id="updateFiliereChoiceBox" layoutX="431.0" layoutY="99.0" prefHeight="38.0" prefWidth="376.0" style="-fx-border-color: #C1BBEB; -fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: #ffffff;" />
+            <TextField fx:id="updateSubjectCoeffTextField" layoutX="18.0" layoutY="99.0" prefHeight="38.0" prefWidth="376.0" style="-fx-border-color: #C1BBEB; -fx-background-radius: 5; -fx-border-radius: 5;" />
          </children>
       </AnchorPane>
-      <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="626.0" prefHeight="44.0" prefWidth="840.0" style="-fx-background-color: #4D44B5;">
+      <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="611.0" prefHeight="44.0" prefWidth="840.0" style="-fx-background-color: #4D44B5;">
          <children>
             <Region prefHeight="51.0" prefWidth="16.0" />
             <Label text="Supprimer une Matière" textFill="WHITE">
@@ -107,15 +107,15 @@
             </Label>
          </children>
       </HBox>
-      <AnchorPane layoutX="13.0" layoutY="670.0" prefHeight="74.0" prefWidth="841.0" style="-fx-background-color: #ffffff;">
+      <AnchorPane layoutX="13.0" layoutY="655.0" prefHeight="128.0" prefWidth="842.0" style="-fx-background-color: #ffffff;">
          <children>
-            <Label layoutX="14.0" layoutY="27.0" text="Nom de la Matière à Supprimer *" textFill="#303972">
+            <Label layoutX="14.0" layoutY="19.0" text="Nom de la Matière à Supprimer *" textFill="#303972">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <TextField fx:id="deleteSubjectLabelTextField" layoutX="245.0" layoutY="19.0" prefHeight="37.0" prefWidth="374.0" style="-fx-border-color: #C1BBEB; -fx-background-radius: 5; -fx-border-radius: 5;" />
-            <Button layoutX="702.0" layoutY="19.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="103.0" style="-fx-background-color: #4D44B5; -fx-background-radius: 40;" text="Supprimer" textFill="WHITE">
+            <TextField fx:id="deleteSubjectLabelTextField" layoutX="244.0" layoutY="10.0" prefHeight="38.0" prefWidth="376.0" style="-fx-border-color: #C1BBEB; -fx-background-radius: 5; -fx-border-radius: 5;" />
+            <Button layoutX="707.0" layoutY="41.0" mnemonicParsing="false" onAction="#deleteSubjectMethode" prefHeight="37.0" prefWidth="103.0" style="-fx-background-color: #4D44B5; -fx-background-radius: 40;" text="Supprimer" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
@@ -123,6 +123,12 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
+            <Label layoutX="14.0" layoutY="75.0" text="Filière Associée à la Matière *" textFill="#303972">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="deleteFiliereChoiceBox" layoutX="244.0" layoutY="68.0" prefHeight="38.0" prefWidth="376.0" style="-fx-border-color: #C1BBEB; -fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: #ffffff;" />
          </children>
       </AnchorPane>
    </children>

@@ -10,7 +10,6 @@ import helper.CustomAlerts;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Insets;
 import javafx.scene.Parent;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -184,18 +183,19 @@ public class MainSceneController {
 
     public void page4(ActionEvent event) throws IOException 
     {
-        loadPage("page4");
+        loadPage("NotesScene");
     }
 
     public void page5(ActionEvent event) throws IOException 
     {
-        loadPage("page5");
+        loadPage("TeacherScene");
     }
 
     private void loadPage(String page) throws IOException {
-        Parent root = null;
-        root = FXMLLoader.load(getClass().getResource("../views/" +page +".fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../views/" + page + ".fxml"));
+    
+        // Ensure dynamic resizing
         bp.setCenter(root);
-        bp.setPadding(new Insets(0));
+    
     }
 }

@@ -28,4 +28,22 @@
     -fx-cursor: hand;
 }
 
+.button {
+    -fx-background-color: #4B2F9D;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-border-width: 0 0 0 4px;
+    -fx-border-color: transparent;
+    -fx-padding: 8 16;
+}
+
+.button.active {
+    -fx-background-color: #6A4CC7;
+    -fx-border-color: #FFD700; /* Gold border for active button */
+}
+
+.button.inactive {
+    -fx-opacity: 0.7;
+}
+
 
